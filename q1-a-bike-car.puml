@@ -1,0 +1,45 @@
+@startuml..\
+
+
+wheel "2..*" -* vehicle
+chassis "1" --* vehicle
+
+vehicle - "1" person : steers <
+
+vehicle <|-- bike : pedal <
+vehicle <|-- car : drive <
+
+bike -- "1" name 
+
+car *-- "1" engine
+
+class weather {
+    condition[]
+}
+
+
+person "1" -- "1" home
+
+
+
+person : steer()
+person : startingLocation[]
+person : destination[]
+
+
+vehicle : go()
+vehicle : stop()
+vehicle : turn()
+
+car : engine[]
+
+engine : cylinders[]
+engine : run()
+
+chassis : idNumber[]
+
+wheel : spin()
+
+
+
+@enduml

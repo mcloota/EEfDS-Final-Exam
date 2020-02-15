@@ -1,0 +1,15 @@
+@startuml
+
+
+
+
+[*] -> joinConversation:authorizeUser
+
+joinConversation --> receiveConversation:authorizeConversation
+
+receiveConversation -> listenToMessage:receiveForwardedMessages
+
+listenToMessage --> [*]
+
+
+@enduml

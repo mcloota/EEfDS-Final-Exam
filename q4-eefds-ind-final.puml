@@ -1,0 +1,9 @@
+@startuml..\
+
+hide circle
+
+consumer - producer : runtime
+producer -- manager :design-time
+consumer -- manager
+
+@enduml

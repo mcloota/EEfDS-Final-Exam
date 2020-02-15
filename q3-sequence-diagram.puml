@@ -1,0 +1,22 @@
+@startuml
+
+
+
+message -> conversation:sendMsg()
+conversation -> conversationRepo:
+conversationRepo -> listener:authorizeFwd()
+
+alt add participants
+
+    listener <-- user:joinConversation()
+
+    message <-- listener:newMessage()
+
+end
+
+message <-- listener:newMessage
+
+== repetition ==
+
+
+@enduml

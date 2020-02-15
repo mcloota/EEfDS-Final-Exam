@@ -1,0 +1,20 @@
+@startuml
+start
+:wakeUp;
+
+if (weekday?) then (yes)
+  :goToWork;
+
+      if (weatherIsGood) then (yes)
+        :rideBikeToWork;
+  else (no)
+    :driveCarToWork;
+endif
+
+:work;
+:goHome;
+
+endif
+
+stop
+@enduml

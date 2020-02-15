@@ -1,0 +1,39 @@
+@startuml..\
+
+object chassis
+object weather
+object wheel
+object vehicle
+object person
+object name
+object bike
+object engine
+object car
+object home
+
+
+wheel "2..*" -* vehicle
+chassis "1" --* vehicle
+vehicle - "1" person : steers <
+vehicle <|-- bike : pedal <
+vehicle <|-- car : drive <
+bike -- "1" name 
+car *-- "1" engine
+person "1" -- "1" home
+
+chassis : idNumber = 82828377
+person : name = cupid
+person : startingLocation = vancouver
+person : destination = british columbia
+home : location = pacificNorthwest
+home : type = shack
+car : engine = big
+car : model = 4runner
+car : mileage = 16mpg
+bike : type = fixedGear
+weather : condition = good
+engine : cylinders = 6
+
+
+
+@enduml
